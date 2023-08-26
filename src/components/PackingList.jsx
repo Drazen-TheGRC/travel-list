@@ -22,7 +22,7 @@ function Item({ item }) {
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.description}
       </span>
-      <button>✖️</button>
+      <button>❌</button>
     </li>
   );
 }
