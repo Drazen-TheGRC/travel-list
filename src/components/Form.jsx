@@ -1,12 +1,8 @@
 import { useState } from "react";
 
-function Form(props) {
+function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
-
-  function handleAddItems(item) {
-    props.setItems((prevItems) => [...prevItems, item]);
-  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -15,7 +11,7 @@ function Form(props) {
 
     const newItem = { description, quantity, packed: false, id: Date.now() };
 
-    handleAddItems(newItem);
+    onAddItems(newItem);
 
     console.log(newItem);
     setDescription("");
