@@ -4,12 +4,12 @@ const initialItems = [
   { id: 3, description: "T-shirt", quantity: 10, packed: false },
 ];
 
-function PackingList() {
+function PackingList({ items }) {
   console.log("hey from PackingList");
   return (
     <div className="list">
       <ul>
-        {initialItems.map((item) => (
+        {items.map((item) => (
           <Item item={item} key={item.id} />
         ))}
       </ul>
