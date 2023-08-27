@@ -14,11 +14,16 @@ function App() {
     setItems((prevItems) => [...prevItems, item]);
   }
 
+  function handleDeleteItem(itemId) {
+    console.log(itemId);
+    setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+  }
+
   return (
     <div className="app">
       <Logo />
       <Form onAddItems={handleAddItems} />
-      <PackingList items={items} />
+      <PackingList items={items} onDeleteItem={handleDeleteItem} />
       <Stats />
     </div>
   );
