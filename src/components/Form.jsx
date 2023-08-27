@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Form() {
   const [description, setDescription] = useState("");
-  const [quantity, setQuantity] = useState(5);
+  const [quantity, setQuantity] = useState(1);
 
   function handleSubmit(event) {
     event.preventDefault();
